@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hotel GonVille · Nova Esperança, PR</title>
+  <meta name="description" content="Hotel no centro de Nova Esperança (PR). Café da manhã, Wi-Fi e estacionamento inclusos. Recepção 24 horas. Reservas: (44) 3252-4040 e WhatsApp (44) 99858-4040.">
+  <meta name="theme-color" content="#6e1a40">
+  <meta property="og:title" content="Hotel GonVille · Nova Esperança, PR">
+  <meta property="og:description" content="Hotel no centro de Nova Esperança. Café da manhã, Wi-Fi e estacionamento inclusos.">
+  <meta property="og:image" content="img/gon-ville-hotel.jpg">
+  <link rel="icon" href="img/hotel_gonviller.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "Hotel GonVille",
+    "image": "img/gon-ville-hotel.jpg",
+    "telephone": "+55 44 3252-4040",
+    "email": "hotelgonville@hotmail.com",
+    "checkinTime": "14:00",
+    "checkoutTime": "12:00",
+    "petsAllowed": true,
+    "starRating": { "@type": "Rating", "ratingValue": "2" },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Quatorze de Dezembro, 113",
+      "addressLocality": "Nova Esperança",
+      "addressRegion": "PR",
+      "postalCode": "87600-000",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="header" id="header">
+  <div class="header__in">
+    <a href="#topo" class="logo">
+      <img src="img/hotel_gonviller.png" alt="" width="40" height="40">
+      <span>Hotel GonVille</span>
+    </a>
+    <nav id="menu" class="nav" aria-label="Principal">
+      <a href="#quartos">Quartos</a>
+      <a href="#cafe">Café da manhã</a>
+      <a href="#bom-saber">Bom saber</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#como-chegar">Como chegar</a>
+    </nav>
+    <a href="tel:+554432524040" class="header__tel">(44) 3252-4040</a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span></button>
+  </div>
+</header>
+
+
+<main id="conteudo">
+
+  <!-- 1. ABERTURA + RESERVA -->
+  <section class="page hero" id="topo" data-name="Início">
+    <img class="hero__bg" src="img/gon-ville-hotel.jpg" alt="" fetchpriority="high">
+    <div class="hero__shade"></div>
+    <div class="hero__content">
+      <img class="hero__badge" src="img/hotel_gonviller.png" alt="Logo do Hotel GonVille" width="104" height="104">
+      <h1>Hotel GonVille</h1>
+      <p class="hero__lead">Fique no centro de Nova Esperança com café da manhã, Wi-Fi e estacionamento já inclusos na diária. A recepção espera você 24 horas por dia.</p>
+    </div>
+
+    <form class="book" id="reservar" novalidate>
+      <label class="field">
+        <span>Chegada</span>
+        <input type="date" name="checkin" required>
+      </label>
+      <label class="field">
+        <span>Saída</span>
+        <input type="date" name="checkout" required>
+      </label>
+      <label class="field">
+        <span>Adultos</span>
+        <select name="adultos">
+          <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>Mais de 5</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Crianças</span>
+        <select name="criancas">
+          <option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>Mais de 4</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Quarto</span>
+        <select name="quarto">
+          <option>Tanto faz</option>
+          <option>Standard</option>
+          <option>Luxo</option>
+        </select>
+      </label>
+      <button type="submit" class="btn btn--wa">Consultar no WhatsApp</button>
+      <details class="book__more">
+        <summary>Vai levar animal ou tem algum pedido?</summary>
+        <div class="book__extra">
+          <label class="check"><input type="checkbox" name="pet"> Vou levar cão ou gato</label>
+          <label class="field">
+            <span>Pedido</span>
+            <input type="text" name="pedido" placeholder="Ex.: prefiro não subir escada, vou chegar depois das 22h">
+          </label>
+        </div>
+      </details>
+      <p class="book__msg" id="booking-msg" role="status"></p>
+    </form>
+  </section>
+
+  <!-- 2. O HOTEL -->
+  <section class="page about" id="sobre" data-name="O hotel">
+    <div class="wrap">
+      <div class="about__grid">
+        <h2>Venha a trabalho, a passeio ou para visitar a família. Aqui você fica perto de tudo.</h2>
+        <div class="about__text">
+          <p>O GonVille fica na Av. Quatorze de Dezembro, bem no centro de Nova Esperança. Dá para resolver a vida no comércio e nos bancos e jantar por perto sem pegar o carro.</p>
+          <p>Temos quartos de solteiro, casal, triplos e para a família toda. Chegue a partir das 14h e aproveite até o meio-dia da saída.</p>
+        </div>
+      </div>
+      <dl class="facts">
+        <div><dt>4,2</dt><dd>a nota que 490 hóspedes nos deram no Google</dd></div>
+        <div><dt>24h</dt><dd>de recepção aberta, para você chegar a qualquer hora</dd></div>
+        <div><dt>20 vagas</dt><dd>de estacionamento grátis dentro do hotel</dd></div>
+        <div><dt>Incluso</dt><dd>café da manhã e Wi-Fi, sem pagar nada a mais</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 3. LUXO -->
+  <section class="page room" id="quartos" data-name="Quarto Luxo">
+    <div class="room__media"><div class="slider" data-gallery="luxo"></div></div>
+    <div class="room__body">
+      <p class="room__kind">Quartos</p>
+      <h2>Luxo</h2>
+      <p>Ar-condicionado e frigobar para os dias quentes do noroeste do Paraná. Ideal para descansar bem depois de um dia cheio.</p>
+      <ul class="ticks">
+        <li>Ar-condicionado</li>
+        <li>Frigobar</li>
+        <li>TV</li>
+        <li>Banheiro privativo</li>
+        <li>Café da manhã incluso</li>
+      </ul>
+      <div class="room__actions">
+        <a href="#topo" class="btn" data-quarto="Luxo">Consultar o Luxo</a>
+        <button class="link" data-open="luxo" data-index="0">Ver as 7 fotos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. STANDARD -->
+  <section class="page room room--flip" id="standard" data-name="Quarto Standard">
+    <div class="room__media"><div class="slider" data-gallery="standard"></div></div>
+    <div class="room__body">
+      <p class="room__kind">Quartos</p>
+      <h2>Standard</h2>
+      <p>A diária mais em conta, com ventilador de teto. Para quem quer economizar sem abrir mão de uma boa noite de sono.</p>
+      <ul class="ticks">
+        <li>Ventilador de teto</li>
+        <li>TV</li>
+        <li>Banheiro privativo</li>
+        <li>Café da manhã incluso</li>
+      </ul>
+      <div class="room__actions">
+        <a href="#topo" class="btn" data-quarto="Standard">Consultar o Standard</a>
+        <button class="link" data-open="standard" data-index="0">Ver as 4 fotos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CAFÉ -->
+  <section class="page cafe" id="cafe" data-name="Café da manhã">
+    <div class="wrap cafe__grid">
+      <h2>Café da manhã</h2>
+      <div>
+        <p>Comece o dia sem pressa. O buffet já vem na diária e tem pão francês, de forma, integral e de leite, pão de queijo, bolos, presunto, muçarela e frutas da época. É só descer e se servir.</p>
+        <button class="link link--light" data-open="cafe" data-index="0">Ver as 17 fotos do café</button>
+      </div>
+    </div>
+    <div class="marquee" aria-hidden="true"><div class="marquee__track" id="marquee"></div></div>
+  </section>
+
+  <!-- 6. BOM SABER -->
+  <section class="page faq" id="bom-saber" data-name="Bom saber">
+    <div class="wrap faq__grid">
+      <div>
+        <h2>Bom saber</h2>
+        <p>Juntamos aqui o que os hóspedes mais perguntam, para sua estadia ser tranquila do começo ao fim. Ficou alguma dúvida? Fale com a gente no <a href="https://wa.me/5544998584040" target="_blank" rel="noopener">WhatsApp</a>.</p>
+      </div>
+      <div class="acc">
+        <details open><summary>Posso ir de carro?</summary><p>Claro! O estacionamento fica dentro do hotel, é gratuito e tem cerca de 20 vagas, ocupadas por ordem de chegada.</p></details>
+        <details><summary>E se eu chegar tarde da noite?</summary><p>Sem problema, a recepção fica aberta 24 horas. Se for chegar de madrugada, avise na reserva que a gente espera você.</p></details>
+        <details><summary>Tem elevador?</summary><p>Uma das alas tem elevador. Se você prefere evitar escada ou vem com muita bagagem, peça um quarto nessa ala ao reservar.</p></details>
+        <details><summary>Como funciona a água quente?</summary><p>O chuveiro é a gás: deixe a água correr uns dois minutinhos e ela chega quente.</p></details>
+        <details><summary>E nos dias frios?</summary><p>O ar-condicionado dos quartos só resfria. Se a noite esfriar, é só pedir uma coberta extra na recepção.</p></details>
+        <details><summary>Quando o quarto é arrumado?</summary><p>Todos os dias. Quando sair, deixe a chave na recepção para a camareira poder entrar.</p></details>
+        <details><summary>Posso levar meu pet?</summary><p>Pode, cães e gatos são bem-vindos. Só avise na reserva que ele vem junto.</p></details>
+        <details><summary>Tem lavanderia?</summary><p>Tem. Se a viagem for longa, o hotel lava suas roupas, com valor cobrado por peça. A tabela fica na recepção.</p></details>
+        <details><summary>Como posso pagar?</summary><p>Aceitamos cartão de crédito, débito, por aproximação e dinheiro.</p></details>
+        <details><summary>Pode fumar?</summary><p>Para o conforto de todos, não é permitido fumar dentro do hotel.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. AVALIAÇÕES -->
+  <section class="page reviews" id="avaliacoes" data-name="Avaliações">
+    <div class="wrap">
+      <h2 class="reviews__score">4,2 <span>de 5 no Google, com 490 avaliações</span></h2>
+      <div class="quotes" id="quotes">
+        <figure class="quote is-on">
+          <blockquote>“Chegamos numa segunda-feira e mesmo assim a atendente nos indicou um restaurante que funcionava à noite.”</blockquote>
+          <figcaption>Marina B., no Tripadvisor</figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>“Quarto e banheiro limpos, atendimento excelente… café razoável. Ótimo custo-benefício.”</blockquote>
+          <figcaption>Mateus M., no Google</figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>“Estacionamento seguro; quartos bem equipados, com camas confortáveis e limpas.”</blockquote>
+          <figcaption>Mauro F., viagem de negócios, no Google</figcaption>
+        </figure>
+      </div>
+      <div class="quotes__nav">
+        <div class="dots" id="dots" role="tablist" aria-label="Avaliações"></div>
+        <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Gonville+Nova+Esperan%C3%A7a" target="_blank" rel="noopener">Ler todas no Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. COMO CHEGAR + RODAPÉ -->
+  <section class="page where" id="como-chegar" data-name="Como chegar">
+    <div class="where__main">
+      <div class="where__map">
+        <iframe title="Mapa com a localização do Hotel GonVille" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Av.+Quatorze+de+Dezembro,+113,+Nova+Esperan%C3%A7a+-+PR,+87600-000&amp;output=embed"></iframe>
+      </div>
+      <div class="where__text">
+        <h2>Como chegar</h2>
+        <address>Av. Quatorze de Dezembro, 113<br>Centro, Nova Esperança, PR<br>CEP 87600-000</address>
+        <p>Vindo de Maringá, são cerca de 45&nbsp;km pela BR-376, no sentido de Paranavaí. Abra a rota no seu celular e boa viagem!</p>
+        <div class="where__btns">
+          <a class="btn btn--line" href="https://goo.gl/maps/G1HaEUvVA2Nu5xfy9" target="_blank" rel="noopener">Google Maps</a>
+          <a class="btn btn--line" href="https://waze.com/ul?q=Av.%20Quatorze%20de%20Dezembro%2C%20113%2C%20Nova%20Esperan%C3%A7a%20PR&amp;navigate=yes" target="_blank" rel="noopener">Waze</a>
+        </div>
+        <p class="small">Bateu a fome? O hotel serve o café da manhã, e para o almoço e o jantar há boas opções a poucos minutos, como o Cor &amp; Sabor, A Churrascaria, o Steak Ranch e o SG Gastrobar. Pergunte na recepção o que está aberto no dia.</p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="img/hotel_gonviller.png" alt="Logo do Hotel GonVille" width="64" height="64">
+          <div>
+            <p class="footer__name">Hotel GonVille</p>
+            <p>No centro de Nova Esperança, PR</p>
+            <p class="footer__base">© <span id="ano">2026</span> · <a href="#topo">Voltar ao início ↑</a></p>
+          </div>
+        </div>
+        <div>
+          <h3>Fale com a gente</h3>
+          <p><a href="tel:+554432524040">(44) 3252-4040</a><br>
+          <a href="https://wa.me/5544998584040" target="_blank" rel="noopener">WhatsApp (44) 99858-4040</a><br>
+          <a href="mailto:hotelgonville@hotmail.com">hotelgonville@hotmail.com</a></p>
+        </div>
+        <div>
+          <h3>No site</h3>
+          <p><a href="#quartos">Quartos</a><br><a href="#cafe">Café da manhã</a><br><a href="#bom-saber">Bom saber</a></p>
+        </div>
+        <div>
+          <h3>Horários</h3>
+          <p>Recepção 24 horas<br>Check-in a partir das 14h<br>Check-out até as 12h</p>
+        </div>
+      </div>
+    </footer>
+  </section>
+</main>
+
+<nav class="mobile-bar" aria-label="Contato rápido">
+  <a href="tel:+554432524040">Ligar</a>
+  <a href="#topo" class="mobile-bar__main">Reservar</a>
+</nav>
+
+<dialog class="lightbox" id="lightbox" aria-label="Fotos">
+  <figure>
+    <img id="lb-img" alt="">
+    <figcaption><span id="lb-cap"></span><span id="lb-num" class="lb-num"></span></figcaption>
+  </figure>
+  <button class="lb-btn lb-prev" aria-label="Foto anterior">‹</button>
+  <button class="lb-btn lb-next" aria-label="Próxima foto">›</button>
+  <button class="lb-close" aria-label="Fechar">✕</button>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
